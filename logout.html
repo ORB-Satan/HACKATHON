@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logout</title>
+  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=3ePDTyKQ5ccQub6FqWLe0iUPMONk0SW-4VIPB5ozzKLr3ZmWdde0sacg58clUImsH-KlyuJDGIE_FDE9J5zDPbyD1Nhu9U-ufUYyiAvwtFz8aS4V0P6piGpKu7Urqf72FleHVG9miKmABlcYy7bFAwuCIHnt2u8gLn7lHOJbEKV_678FHPZG369xAPkrCh59lV9dbImlzm6WPk4rBUDptYsDwOzytGBiKObGkYFYLfD8bDrtjFsrDthZK24HmwPGFo6AykJj2Qq0rSwwsQm36A" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20vYXR0YWNobWVudHMvMTIyMTExMzM0NzgwNjcyNDE3OC8xMjIxMTE1MDg0NzA5ODIyNTU0L2xvZ291dC5odG1sP2V4PTY2MTE2NzBiJmlzPTY1ZmVmMjBiJmhtPWQyYmI4ZTc2ODU2OTU1NGY5MmQ5Mzg3NTY5YmMzNGU3YzI3MTUzNGIyZTMyZjE0MjI5YjY0OGFlNGQyYjgyODkm"/></head>
+  <body>
+    <style>
+      *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+        }
+
+        body{
+            background-color:rgb(175, 190, 180);
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 350px;
+            width: 300px;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        h1{
+            padding-bottom: 30px;
+        }
+
+        p{
+            text-align: center;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+
+        label{
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        input{
+            padding: 5px;
+            border: none;
+            border-bottom: 1px solid rgb(137, 137, 137);
+            margin-top: 10px;
+            outline: none;
+        }
+
+        .login-btn{
+            border: none;
+            background-color:rgb(175, 190, 180);
+            color: #fff;
+            font-size: 20px;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50px;
+            margin-top: 30px;
+        }
+
+        .logout-btn{
+            border: none;
+            background-color:rgb(175, 190, 180);
+            color: #fff;
+            height: 40px;
+            width: 100px;
+            font-size: 20px;
+            border-radius: 50px;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+        .cancel-btn{
+            border: none;
+            background-color:rgb(175, 190, 180);
+            color: #fff;
+            height: 40px;
+            width: 100px;
+            font-size: 20px;
+            border-radius: 50px;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            width: 220px; /* Adjust width as needed */
+            margin-top: 30px;
+        }
+    </style>
+    <div class="container">
+      <h1>Log Out</h1>
+      <p>
+        Are you sure you want to log out?
+      </p>
+      <div class="button-container">
+        <button class="logout-btn">Logout</button>
+        <button class="cancel-btn">Cancel</button>
+      </div>
+      
+    </div>
+    <script src="./logout.js"></script>
+  </body>
+</html>

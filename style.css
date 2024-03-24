@@ -1,0 +1,705 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+/* background color*/
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background: #e3edf7;
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba( 34, 42, 66, 0);
+    background: linear-gradient(#95b89c,#113a3d);
+}
+
+/*
+.crops{
+  width: 220px;
+  height: 220px;
+  position: relative;
+  display: flex; /* Changed to flex 
+  justify-content: center; /* Center content horizontally 
+  align-items: center; /* Center content vertically 
+  border-radius: 50%;
+  overflow: hidden; /* Added to hide overflow 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Simplified box-shadow 
+  margin-top: 150px;
+  margin-left: 100px;
+}*/
+
+.navbar {
+  background-color: #0cb6e5;
+  padding: 1rem 0;
+}
+
+/* Style for the navbar brand */
+.navbar-brand {
+  font-weight: bold;
+}
+
+
+.row {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.col {
+  flex: 1; /* Added to make columns equal width */
+}
+
+.skill {
+  width: 220px;
+  height: 220px;
+  position: relative;
+  display: flex; /* Changed to flex */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  border-radius: 50%;
+  overflow: hidden; /* Added to hide overflow */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Simplified box-shadow */
+  margin-top: 150px;
+  margin-left: 100px;
+}
+
+.skill::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(#46b815 90%, transparent 0);
+  border-radius: 50%;
+  transform: rotate(-90deg); /* Start from top */
+}
+
+.content {
+  position: relative; /* Added to position text */
+  z-index: 1; /* Ensure text is above progress bar */
+  text-align: center; /* Center text */
+  color: #010101;
+}
+
+.content span {
+  font-size: 24px;
+  font-weight: bold;
+} 
+
+.wrapper{
+  width:450px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0,0.12);
+}
+
+.wrapper header{
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
+}
+
+header .icons
+{
+  display: flex;
+}
+
+header .icons span{
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  color: #878787;
+  text-align: center;
+  line-height: 38px;
+  font-size: 1.9rem;
+  user-select: none;
+  border-radius: 50%;
+}
+
+.icons span:last-child{
+  margin-right: 10px;
+}
+
+header .icons span:hover{
+  background: #f2f2f2;
+}
+
+header .current-date{
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
+.calender{
+  padding: 20px;
+}
+
+.calender ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+
+.calender .days{
+  margin-bottom: 20px;
+}
+
+.calendar .days{
+  margin-bottom: 20px;
+}
+
+.calender li{
+  color: #333;
+  width: calc(100%/7);
+  font-size: 1.07rem;
+}
+
+.calendar .weeks li{
+  font-weight: 500;
+  cursor:default;
+}
+
+.calendar .days li{
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+}
+
+.days li.inactive{
+  color: #aaa;
+}
+
+.days li.active{
+  color: #fff;
+}
+
+.days li::before{
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.days li.active::before{
+  background: #9b59b6;
+}
+
+.days li:not(.active):hover::before{
+  background: #f2f2f2;
+}
+
+/* Dashboard */
+.has-details {
+  position: relative;
+}
+.has-details:hover span {
+  transform: translateY(70%) scale(1);
+}
+.container{
+  margin-top: 150px;
+}
+
+/*Calendar*/
+.container-calendar {
+	background: #ffffff;
+	padding: 15px;
+	max-width: 900px;
+	margin: 0 auto;
+	overflow: auto;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Event section styling */
+#event-section {
+	padding: 10px;
+	background: #f5f5f5;
+	margin: 20px 0;
+	border: 1px solid #ccc;
+}
+
+.container-calendar #left h1 {
+	color: green;
+	text-align: center;
+	background-color: #f2f2f2;
+	margin: 0;
+	padding: 10px 0;
+}
+
+#event-section h3 {
+	color: green;
+	font-size: 18px;
+	margin: 0;
+}
+
+#event-section input[type="date"],
+#event-section input[type="text"] {
+	margin: 10px 0;
+	padding: 5px;
+	width: 80%;
+}
+
+#event-section button {
+	background: green;
+	color: white;
+	border: none;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+.event-marker {
+	position: relative;
+}
+
+.event-marker::after {
+	content: '';
+	display: block;
+	width: 6px;
+	height: 6px;
+	background-color: red;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+/* event tooltip styling */
+.event-tooltip {
+	position: absolute;
+	background-color: rgba(234, 232, 232, 0.763);
+	color: black;
+	padding: 10px;
+	border-radius: 4px;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: none;
+	transition: all 0.3s;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.event-marker:hover .event-tooltip {
+	display: block;
+}
+
+/* Reminder section styling */
+#reminder-section {
+	padding: 10px;
+	background: #f5f5f5;
+	margin: 20px 0;
+	border: 1px solid #ccc;
+}
+
+#reminder-section h3 {
+	color: green;
+	font-size: 18px;
+	margin: 0;
+}
+
+#reminderList {
+	list-style: none;
+	padding: 0;
+}
+
+#reminderList li {
+	margin: 5px 0;
+	font-size: 16px;
+}
+
+/* Style for the delete buttons */
+.delete-event {
+	background: rgb(237, 19, 19);
+	color: white;
+	border: none;
+	padding: 5px 10px;
+	cursor: pointer;
+	margin-left: 10px;
+	align-items: right;
+}
+
+/* Buttons in the calendar */
+.button-container-calendar button {
+	cursor: pointer;
+	background: green;
+	color: #fff;
+	border: 1px solid green;
+	border-radius: 4px;
+	padding: 5px 10px;
+}
+
+/* Calendar table */
+.table-calendar {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.table-calendar td,
+.table-calendar th {
+	padding: 5px;
+	border: 1px solid #e2e2e2;
+	text-align: center;
+	vertical-align: top;
+}
+
+/* Date picker */
+.date-picker.selected {
+	background-color: #f2f2f2;
+	font-weight: bold;
+	outline: 1px dashed #00BCD4;
+}
+
+.date-picker.selected span {
+	border-bottom: 2px solid currentColor;
+}
+
+/* Day-specific styling */
+.date-picker:nth-child(1) {
+	color: red;
+	/* Sunday */
+}
+
+.date-picker:nth-child(6) {
+	color: green;
+	/* Friday */
+}
+
+/* Hover effect for date cells */
+.date-picker:hover {
+	background-color: green;
+	color: white;
+	cursor: pointer;
+}
+
+/* Header for month and year */
+#monthAndYear {
+	text-align: center;
+	margin-top: 0;
+}
+
+/* Navigation buttons */
+.button-container-calendar {
+	position: relative;
+	margin-bottom: 1em;
+	overflow: hidden;
+	clear: both;
+}
+
+#previous {
+	float: left;
+}
+
+#next {
+	float: right;
+}
+
+/* Footer styling */
+.footer-container-calendar {
+	margin-top: 1em;
+	border-top: 1px solid #dadada;
+	padding: 10px 0;
+}
+
+.footer-container-calendar select {
+	cursor: pointer;
+	background: #ffffff;
+	color: #585858;
+	border: 1px solid #bfc5c5;
+	border-radius: 3px;
+	padding: 5px 1em;
+}
+
+/*
+#nav-bar
+{
+    position:sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar
+{
+    background-image: linear-gradient(to right, #1edce6, #1515ca);
+    padding: 0 !important;
+}
+.navbar-nav li
+{
+    padding: 0 10px;
+}
+.navbar-nav li a
+{
+   color: #ffffff !important;
+   font-weight: 550;
+}
+
+/*.progress-bars {
+    display: flex;
+  }
+  
+  .progress-bar {
+    margin-right: 20px;
+    position: relative;
+  }
+  
+  .progress-bar .outer {
+    width: 200px; /* Adjust as needed 
+    height: 20px; /* Adjust as needed 
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .progress-bar .inner {
+    height: 100%;
+    background-color: #007bff; /* Change color as needed 
+  }
+  
+  .progress-bar .number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+  }*/
+  
+
+/*radial bar
+.outer, .outer2
+{
+    height: 160px;
+    width: 160px;
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+}
+
+.inner, .inner2
+{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05) ;
+}
+
+#number, #number2
+{
+    font-weight: 600;
+    color: #555;
+    font-size: 20px;
+}
+
+circle, .circle2
+{
+    fill:none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+    animation: anim 2s linear forwards;
+}
+
+@keyframes anim{
+    100%{
+        stroke-dashoffset: 180;
+    }
+}
+
+.circle:nth-child(1) {
+    stroke: url(#GradientColor2);
+  }
+
+
+svg
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* ==================================================  Newest Code for progress bar
+.progress-bars {
+  display: flex;
+}
+
+.progress-bar {
+  margin-right: 20px;
+  position: relative;
+}
+
+.progress-bar .outer {
+  width: 200px; /* Adjust as needed 
+  height: 20px; /* Adjust as needed 
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar .inner {
+  height: 100%;
+  background-color: #007bff; /* Change color as needed 
+}
+
+.progress-bar .number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+}=========================================Until here stop
+*/
+
+
+/*Humidity
+.outer2
+{
+    height: 160px;
+    width: 160px;
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+}
+
+.inner2
+{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05) ;
+}
+
+#number2
+{
+    font-weight: 600;
+    color: #555;
+    font-size: 20px;
+}
+
+circle
+{
+    fill:none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+    animation: anim 2s linear forwards;
+}
+
+@keyframes anim{
+    100%{
+        stroke-dashoffset: 190;
+    }
+}
+
+svg
+{
+    position: absolute;
+    top: 0;
+    left: 3;
+
+}
+*/
+
+/* Circular Progress Bar 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+.row {
+	width: 80%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.row.col.skill {
+	width: 220px;
+	height: 220px;
+	position: relative;
+	display: grid;
+	place-items: center;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5),
+				-5px -5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.row.col:nth-child(1).skill {
+	background: conic-gradient(#ffba08 90%, transparent 0);
+}
+.row.col:nth-child(2).skill {
+	background: conic-gradient(#ffba08 90%, transparent 0);
+}
+.row.col:nth-child(3).skill {
+	background: conic-gradient(#ffba08 90%, transparent 0);
+}
+
+.row.col.skill::before {
+	content: '';
+	position: absolute;
+	width: 85%;
+	height: 85%;
+	background: #03071e;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5) inset,
+				-5px -5px 10px rgba(0, 0, 0, 0.5) inset;
+}
+
+.row.col.skill.content {
+	color: #ffba08;
+	position: absolute;
+	font-size: 25px;
+	text-align: center;
+	user-select: none;
+}
+
+.row.col.skill.content span {
+	display: block;
+	padding: 5px 0;
+	letter-spacing: 2px;
+}
+*/

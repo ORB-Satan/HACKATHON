@@ -1,0 +1,29 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background: #e3edf7;
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba( 34, 42, 66, 0);
+    background: linear-gradient(#95b89c, #113a3d);
+}
+
+.navbar {
+  background-color: #0cb6e5;
+  padding: 1rem 0;
+}
+
+/* Style for the navbar brand */
+.navbar-brand {
+  font-weight: bold;
+}
+
+.progress-bar {
+    transition: width 0.5s ease-in-out;
+}
